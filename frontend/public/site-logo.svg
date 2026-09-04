@@ -1,0 +1,62 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Основной 3D-градиент фона -->
+    <linearGradient id="bgGrad" x1="64" y1="32" x2="448" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22D3EE" />
+      <stop offset="50%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#0F766E" />
+    </linearGradient>
+
+    <!-- Градиент для светлого блика сверху -->
+    <linearGradient id="highlightGrad" x1="256" y1="40" x2="256" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Градиент карточки -->
+    <linearGradient id="cardGrad" x1="140" y1="120" x2="372" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F0FDFA" />
+    </linearGradient>
+
+    <!-- Градиент 3D-баджа с галочкой -->
+    <linearGradient id="badgeGrad" x1="290" y1="290" x2="390" y2="390" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34D399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <!-- Объемные тени -->
+    <filter id="mainShadow" x="0" y="20" width="512" height="512" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="24" stdDeviation="20" flood-color="#042F2C" flood-opacity="0.28" />
+    </filter>
+
+    <filter id="cardShadow" x="100" y="100" width="312" height="312" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0F766E" flood-opacity="0.2" />
+    </filter>
+
+    <filter id="badgeGlow" x="250" y="250" width="180" height="180" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#059669" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- 1. Главная форма (Squircle) с объемной тенью -->
+  <rect x="40" y="40" width="432" height="432" rx="108" fill="url(#bgGrad)" filter="url(#mainShadow)" />
+
+  <!-- 2. Блик света на верхней грани иконки (3D объём) -->
+  <rect x="40" y="40" width="432" height="216" rx="108" fill="url(#highlightGrad)" />
+
+  <!-- 3. Центральная карточка списка -->
+  <rect x="136" y="128" width="240" height="256" rx="32" fill="url(#cardGrad)" filter="url(#cardShadow)" />
+
+  <!-- 4. Стилизованные плашки задач -->
+  <rect x="176" y="176" width="160" height="18" rx="9" fill="#99F6E4" />
+  <rect x="176" y="216" width="120" height="18" rx="9" fill="#CCFBF1" />
+  <rect x="176" y="256" width="140" height="18" rx="9" fill="#CCFBF1" />
+
+  <!-- 5. Выступающий 3D-кружок с галочкой (Badge) -->
+  <circle cx="340" cy="340" r="50" fill="url(#badgeGrad)" filter="url(#badgeGlow)" />
+  <circle cx="340" cy="340" r="48" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.4" fill="none" />
+
+  <!-- 6. Белая галочка -->
+  <path d="M318 340 L332 354 L362 324" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
