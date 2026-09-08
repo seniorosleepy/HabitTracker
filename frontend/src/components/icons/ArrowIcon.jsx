@@ -10,7 +10,7 @@ function ArrowIcon() {
       className="VE070Ri"
     >
       <path
-        fill="currentColor"
+        fill="black"
         d="M15.646 9.647a.5.5 0 0 1 .708.707l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 1 1 .708-.707L12 13.294z"
       ></path>
     </svg>
