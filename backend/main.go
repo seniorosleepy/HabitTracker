@@ -48,5 +48,5 @@ func main() {
 	mux.HandleFunc("/task/complete", authMiddleware(completeTask))
 
 	log.Println("Server started on :" + port)
-	log.Fatal(http.ListenAndServe(":"+port, withCors(mux)))
+	log.Fatal(http.ListenAndServe("0.0.0.0:"+port, withCors(mux)))
 }
