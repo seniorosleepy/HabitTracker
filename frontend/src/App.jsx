@@ -5,6 +5,7 @@ import RegisterPage from "./pages/RegisterPage";
 import MainPage from "./pages/MainPage";
 import ForgotPass from "./pages/ForgotPass";
 import ProtectedRoute from "./components/ProtectedRoute";
+import PublicRoute from "./components/PublicRoute";
 
 function App() {
   const [isAuthorized, setIsAuthorized] = useState(
@@ -18,21 +19,24 @@ function App() {
 
   return (
     <Routes>
-      <Route
-        path="/login"
-        element={
-          <LoginPage setAuth={setIsAuthorized} setUserId={setCurrentUserId} />
-        }
-      />
-      <Route
-        path="/register"
-        element={
-          <RegisterPage
-            setAuth={setIsAuthorized}
-            setUserId={setCurrentUserId}
-          />
-        }
-      />
+      <Route element={<PublicRoute isAllowed={isAuthorized} />}>
+        <Route
+          path="/login"
+          element={
+            <LoginPage setAuth={setIsAuthorized} setUserId={setCurrentUserId} />
+          }
+        />
+
+        <Route
+          path="/register"
+          element={
+            <RegisterPage
+              setAuth={setIsAuthorized}
+              setUserId={setCurrentUserId}
+            />
+          }
+        />
+      </Route>
 
       <Route element={<ProtectedRoute isAllowed={isAuthorized} />}>
         <Route
