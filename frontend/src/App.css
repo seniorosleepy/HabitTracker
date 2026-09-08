@@ -185,11 +185,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: -1vh;
+    z-index: -1;
 }
 
 .main-screen-image{
     width: 100%;
     max-width: 300px;
+    min-width: 250px;
     height: auto;
 }
 
@@ -197,7 +200,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -40px;
+    margin-top: -35px;
     gap: 10px;
 }
 
@@ -206,16 +209,16 @@
 }
 
 .greetings{
-    font-size: 20px;
+    font-size: clamp(17px, 4vw, 20px);
     font-weight: 400;
     text-align: center;
 }
 
 .wishes{
     text-align: center;
-    font-size: 15px;
+    font-size: clamp(13px, 3vw, 15px);
     font-weight: 400;
-    width: 280px;
+    width: 220px;
     color: rgba(0, 0, 0, 0.7);
 }
 
