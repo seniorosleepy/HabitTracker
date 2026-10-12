@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/Auth/LoginPage";
+import RegisterPage from "./pages/Auth/RegisterPage";
 import MainPage from "./pages/MainPage";
-import ForgotPass from "./pages/ForgotPass";
-import ProtectedRoute from "./components/ProtectedRoute";
-import PublicRoute from "./components/PublicRoute";
+import ForgotPass from "./pages/Auth/ForgotPass";
+import ProtectedRoute from "./components/routes/ProtectedRoute";
+import PublicRoute from "./components/routes/PublicRoute";
 
 function App() {
   const [isAuthorized, setIsAuthorized] = useState(

@@ -1,9 +1,9 @@
 import "../App.css";
-import Header from "../components/Header";
-import Sidebar from "../components/tasks/Sidebar";
+import Header from "../components/layout/Header";
+import Sidebar from "../components/layout/Sidebar";
 import TaskEditor from "../components/tasks/TaskEditor";
-import MainScreen from "../components/MainScreen";
-import AddTask from "../components/AddTask";
+import MainScreen from "../components/layout/MainScreen";
+import AddTask from "../components/tasks/AddTask";
 import PlusIcon from "../components/icons/PlusIcon";
 import CloseIcon from "../components/icons/CloseIcon";
 import { API_URL } from "../config";

@@ -23,6 +23,10 @@ func main() {
 
 	secretKey = []byte(os.Getenv("JWT_SECRET"))
 
+	if len(secretKey) < 32 {
+		log.Fatal("JWT_SECRET is not set or too short (need 32+ chars)")
+	}
+
 	var err error
 	connStr := os.Getenv("DATABASE_URL")
 	db, err = sql.Open("postgres", connStr)
