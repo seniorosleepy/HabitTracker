@@ -1,4 +1,4 @@
-import backgroundImage from "../assets/white-background-image.jpg";
+import backgroundImage from "../../assets/white-background-image.jpg";
 function MainScreen() {
   const username = localStorage.getItem("username");
   return (

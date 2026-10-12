@@ -73,7 +73,6 @@ func checkUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Println("Попытка входа:", input.Email, input.Password)
 	var dbID int
 	var dbPasswordHash string
 	var dbUsername string
@@ -129,7 +128,7 @@ func getUser(w http.ResponseWriter, r *http.Request) {
 func generateToken(userID int) (string, error) {
 	claims := jwt.MapClaims{
 		"user_id": userID,
-		"exp":     time.Now().Add(7 * 24 * time.Hour).Unix(), // Срок действия — неделя 
+		"exp":     time.Now().Add(7 * 24 * time.Hour).Unix(), // Срок действия — неделя
 	}
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)

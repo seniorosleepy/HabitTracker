@@ -1,4 +1,4 @@
-import SidebarIcon from "./icons/SidebarIcon";
+import SidebarIcon from "../icons/SidebarIcon";
 
 function Header({ onMenuClick, isOpen }) {
   return (
